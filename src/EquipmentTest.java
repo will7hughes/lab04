@@ -47,4 +47,13 @@ class EquipmentTest {
 		
 		Assert.assertEquals("BadBoy", equip.getDescription());
 	}
+
+	void testEqualsObject() throws AssertException {
+		Equipment equip = new Equipment("Bucky/2,3.3,4.4,BadBoy");
+		Equipment equip2 = new Equipment("Bucky/2,3.3,4.4,BadBoy");
+		Equipment equip3 = new Equipment("Roberts/2,3.3,4.4,BadBoy");
+
+		Assert.assertEquals(true, equip.equals(equip2));
+		Assert.assertEquals(false, equip.equals(equip3));
+	}
 }
