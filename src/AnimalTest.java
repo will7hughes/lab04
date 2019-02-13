@@ -21,7 +21,7 @@ public class AnimalTest
         Assert.assertEquals(0, animal.getHeight(), 0.01);
         Assert.assertEquals(0, animal.getWeight(), 0.01);
     }
-    
+
 	void testAnimalStringStringDoubleDouble() throws AssertException {
 		Animal pupper = new Animal("Blue", "Pupper", 5.5, 6.0);
 		
@@ -31,5 +31,29 @@ public class AnimalTest
 		Assert.assertEquals(6.0, pupper.getHeight());
 	}
 
+
+	void testGetColor() throws AssertException {
+		Animal animal = new Animal("Pink", "", 0, 0);
+		
+		Assert.assertEquals("Pink", animal.getColor());
+	}
+
+	void testGetName() throws AssertException {
+		Animal animal = new Animal("", "Doggo", 0, 0);
+		
+		Assert.assertEquals("Doggo", animal.getName());
+	}
+
+	void testGetWeight() throws AssertException {
+		Animal animal = new Animal("", "", 2.2, 0);
+		
+		Assert.assertEquals(2.2, animal.getWeight());
+	}
+
+	void testGetHeight() throws AssertException {
+		Animal animal = new Animal("", "", 0, 3.3);
+		
+		Assert.assertEquals(3.3, animal.getHeight());
+	}
 }
 
