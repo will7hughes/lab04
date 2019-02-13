@@ -11,4 +11,9 @@ class EquipmentTest {
 		Assert.assertEquals("BadBoy", equip.getDescription());
 	}
 
+	void testToString() throws AssertException {
+		Equipment equip = new Equipment("Bucky/2,3.3,4.4,BadBoy");
+
+		Assert.assertEquals("Name: Bucky, Number: 2, Weight: 3.30 lbs, Price: $4.40 - BadBoy", equip.toString());
+	}
 }
