@@ -84,4 +84,14 @@ class ZooTest {
 		// Double twice 1 * 2 = 2, 2 * 2 = 4
 		Assert.assertEquals(4, zoo.getCapacity());
 	}
+    
+	void testToString() throws AssertException {
+		Zoo zoo = new Zoo(3);
+		
+		zoo.addAnimal(new Animal("Blue", "Pupper", 1, 1));
+		zoo.addAnimal(new Animal("Pink", "Doggo", 2, 2));
+		zoo.addAnimal(new Animal("Purple", "Durk", 3, 3));
+		
+		Assert.assertEquals("These animals live in the zoo: \nPupper, a Blue-colored animal. 1.0 pounds, 1.0 inches\nDoggo, a Pink-colored animal. 2.0 pounds, 2.0 inches\nDurk, a Purple-colored animal. 3.0 pounds, 3.0 inches\n", zoo.toString());
+	}
 }
